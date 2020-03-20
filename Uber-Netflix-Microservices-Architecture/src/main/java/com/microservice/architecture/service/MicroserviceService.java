@@ -15,7 +15,7 @@ import com.microservice.architecture.repository.MicroservicesPageRepository;
 import com.microservice.architecture.repository.MicroservicesRepository;
 
 @Service
-public class GA4GHService implements GA4GHServiceInterface {
+public class MicroserviceService implements GA4GHServiceInterface {
 
 	
 	private MicroservicesRepository GA4GHRepository;
@@ -24,7 +24,7 @@ public class GA4GHService implements GA4GHServiceInterface {
 	private MicroservicesPageRepository pg;
 
 	@Autowired   
-	public GA4GHService(MicroservicesRepository GA4GHRepository)
+	public MicroserviceService(MicroservicesRepository GA4GHRepository)
 	{
 		this.GA4GHRepository=GA4GHRepository;
 	}
