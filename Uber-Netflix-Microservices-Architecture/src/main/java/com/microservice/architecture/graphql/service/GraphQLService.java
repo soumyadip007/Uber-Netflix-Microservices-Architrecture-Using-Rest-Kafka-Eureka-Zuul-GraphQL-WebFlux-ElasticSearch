@@ -12,7 +12,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import com.microservice.architecture.graphql.datafetcher.AllDataFetcher;
-import com.microservice.architecture.graphql.datafetcher.DataFetcher;
+import com.microservice.architecture.graphql.datafetcher.SingleDataFetcher;
 import com.microservice.architecture.repository.GA4GHRepository;
 
 import graphql.GraphQL;
@@ -36,7 +36,7 @@ public class GraphQLService {
 	private AllDataFetcher allGA4GHDataFetcher;
 	
 	@Autowired
-	private DataFetcher ga4ghDataFetcher;
+	private SingleDataFetcher ga4ghDataFetcher;
 	
 	private GraphQL graphQL;
 	
