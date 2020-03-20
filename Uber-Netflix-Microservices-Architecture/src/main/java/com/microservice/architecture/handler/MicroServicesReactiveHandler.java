@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
-public class GA4GHReactiveHandler {
+public class MicroServicesReactiveHandler {
 
 	public Mono<ServerResponse> flux(ServerRequest serverRequest){
 		

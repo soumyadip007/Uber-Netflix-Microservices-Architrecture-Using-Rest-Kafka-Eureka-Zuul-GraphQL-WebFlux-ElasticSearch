@@ -9,7 +9,7 @@ import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
-import com.microservice.architecture.handler.GA4GHReactiveHandler;
+import com.microservice.architecture.handler.MicroServicesReactiveHandler;
 
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
@@ -19,7 +19,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class RouterFunctionConfig {
 	
 	@Bean
-	public RouterFunction<ServerResponse> route(GA4GHReactiveHandler reactiveHandler)
+	public RouterFunction<ServerResponse> route(MicroServicesReactiveHandler reactiveHandler)
 	{
 		return RouterFunctions
 			.route(GET("/functional/flux")
