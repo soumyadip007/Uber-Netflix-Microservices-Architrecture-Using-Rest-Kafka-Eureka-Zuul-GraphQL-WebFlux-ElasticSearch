@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.microservice.architecture.entity.Microservices;
-import com.microservice.architecture.service.GA4GHService;
+import com.microservice.architecture.service.MicroserviceService;
 
 import reactor.core.publisher.Flux;
 
