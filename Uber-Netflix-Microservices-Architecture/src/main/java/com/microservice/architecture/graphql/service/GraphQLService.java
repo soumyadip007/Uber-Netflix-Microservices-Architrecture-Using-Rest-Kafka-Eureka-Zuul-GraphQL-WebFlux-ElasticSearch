@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.microservice.architecture.graphql.datafetcher.AllDataFetcher;
 import com.microservice.architecture.graphql.datafetcher.SingleDataFetcher;
-import com.microservice.architecture.repository.GA4GHRepository;
+import com.microservice.architecture.repository.MicroservicesRepository;
 
 import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;
@@ -27,7 +27,7 @@ import graphql.schema.idl.errors.SchemaProblem;
 public class GraphQLService {
 
 	@Autowired
-	GA4GHRepository ga4ghRepository;
+	MicroservicesRepository ga4ghRepository;
 	
 	@Value("classpath:microservice.graphql")
 	Resource resource;
