@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Data
 @AllArgsConstructor
-@Table(name = "ms")
+@Table(name = "MS")
 public class MS {
 
 
