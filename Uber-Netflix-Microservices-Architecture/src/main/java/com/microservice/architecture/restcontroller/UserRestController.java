@@ -115,33 +115,6 @@ public class UserRestController {
 
 	}
 
-	@GetMapping("/genbank/{theId}")
-	public List<Microservices> findByGenBank_Accn(@RequestHeader("key") String language,
-			@PathVariable String theId) {
-		
-		System.out.println(language);
-		System.out.println(language);
-		System.out.println(language);
-		System.out.println(language);
-		System.out.println(language);
-		
-		if(language.equals("microserviceapisecuritykey"))
-			return microservice.findBySequence_Name(theId);
-		
-		return null;
-	}
-
-	@GetMapping("/refseq/{theId}")
-	public List<Microservices> findByRefseq_Accn(@PathVariable String theId) {
-		
-		return microservice.findByRefseq_Accn(theId);
-	}
-	
-	@GetMapping("/sequencelength/{theId}")
-	public List<Microservices> findBySequencelength(@PathVariable String theId) {
-		
-		return microservice.findBySequencelength(theId);
-	}
 	
 
 }
