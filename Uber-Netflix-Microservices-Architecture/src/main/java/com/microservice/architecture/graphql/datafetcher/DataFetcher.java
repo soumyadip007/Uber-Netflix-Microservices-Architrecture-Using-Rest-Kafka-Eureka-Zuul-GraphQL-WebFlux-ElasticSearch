@@ -10,7 +10,7 @@ import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
 
 @Component
-public class GA4GHDataFetcher implements DataFetcher {
+public class DataFetcher implements DataFetcher {
 
 	@Autowired
 	GA4GHRepository ga4ghRepository;
