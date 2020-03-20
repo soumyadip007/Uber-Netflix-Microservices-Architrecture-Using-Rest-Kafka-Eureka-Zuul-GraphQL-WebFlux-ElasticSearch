@@ -15,7 +15,7 @@ import graphql.ExecutionResult;
 
 @CrossOrigin(origins ="*",allowedHeaders="*",maxAge=200000) 
 @RestController
-@RequestMapping("/ga4gh")
+@RequestMapping("/micro")
 public class GraphQLController {
 
 	@Autowired
