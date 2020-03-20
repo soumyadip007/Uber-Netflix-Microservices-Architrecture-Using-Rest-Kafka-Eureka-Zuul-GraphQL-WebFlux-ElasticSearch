@@ -14,5 +14,5 @@ public interface MicroserviceServiceInterface {
 	
 	public Microservices findById(int theId);
 
-	public List<Microservices> findByMicroentity1(String seq);
+	//public List<Microservices> findByMicroentity1(String seq);
 }

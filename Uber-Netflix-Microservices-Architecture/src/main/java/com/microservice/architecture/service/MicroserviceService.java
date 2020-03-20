@@ -49,10 +49,10 @@ public class MicroserviceService implements MicroserviceServiceInterface {
 
 
 
-	public List<Microservices> findByMicroentity1(String seq)
-	{
-		return microservicesRepository.findBymicroentity1(seq);
-	}
+//	public List<Microservices> findByMicroentity1(String seq)
+//	{
+//		return microservicesRepository.findBymicroentity1(seq);
+//	}
 	
 	public List<Microservices> findPage(Integer pageNo, Integer pageSize, String sortBy)
     {

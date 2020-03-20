@@ -13,5 +13,5 @@ public interface MicroservicesRepository extends JpaRepository<Microservices, In
 
 	public Microservices findById(int id);
 
-	public List<Microservices> findBymicroentity1(String seq);
+	//public List<Microservices> findBymicroentity1(String seq);
 }
