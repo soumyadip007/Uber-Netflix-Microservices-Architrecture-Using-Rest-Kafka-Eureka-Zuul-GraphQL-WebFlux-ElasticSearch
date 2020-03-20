@@ -12,19 +12,19 @@ import org.springframework.stereotype.Service;
 
 import com.microservice.architecture.entity.Microservices;
 import com.microservice.architecture.repository.MicroservicesPageRepository;
-import com.microservice.architecture.repository.GA4GHRepository;
+import com.microservice.architecture.repository.MicroservicesRepository;
 
 @Service
 public class GA4GHService implements GA4GHServiceInterface {
 
 	
-	private GA4GHRepository GA4GHRepository;
+	private MicroservicesRepository GA4GHRepository;
 	
 	@Autowired
 	private MicroservicesPageRepository pg;
 
 	@Autowired   
-	public GA4GHService(GA4GHRepository GA4GHRepository)
+	public GA4GHService(MicroservicesRepository GA4GHRepository)
 	{
 		this.GA4GHRepository=GA4GHRepository;
 	}
