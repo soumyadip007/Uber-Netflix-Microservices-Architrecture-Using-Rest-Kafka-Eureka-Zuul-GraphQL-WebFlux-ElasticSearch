@@ -40,6 +40,6 @@ public class MS {
 	private String mincroentity3;		
 	
 
-	@Column(name = "mincroentit")
+	@Column(name = "d")
 	private String mincroentity4;
 }
