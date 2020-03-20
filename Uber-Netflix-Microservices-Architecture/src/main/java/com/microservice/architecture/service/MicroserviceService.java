@@ -8,7 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.microservice.architecture.entity.Microservices;
+import com.microservice.architecture.entity.MS;
 import com.microservice.architecture.repository.MicroservicesPageRepository;
 import com.microservice.architecture.repository.MicroservicesRepository;
 
@@ -28,11 +28,11 @@ public class MicroserviceService implements MicroserviceServiceInterface {
 	}
 	
 	
-	public List<Microservices> findAll() {
+	public List<MS> findAll() {
 		return microservicesRepository.findAll();
 	}
 
-	public void save(Microservices OBJ) {
+	public void save(MS OBJ) {
 		
 		microservicesRepository.save(OBJ);
 	}
@@ -42,7 +42,7 @@ public class MicroserviceService implements MicroserviceServiceInterface {
 		microservicesRepository.deleteById(theId);
 	}
 
-	public Microservices findById(int theId) {
+	public MS findById(int theId) {
 		
 		return microservicesRepository.findById(theId);
 	}
@@ -54,11 +54,11 @@ public class MicroserviceService implements MicroserviceServiceInterface {
 //		return microservicesRepository.findBymicroentity1(seq);
 //	}
 	
-	public List<Microservices> findPage(Integer pageNo, Integer pageSize, String sortBy)
+	public List<MS> findPage(Integer pageNo, Integer pageSize, String sortBy)
     {
         PageRequest paging = PageRequest.of(pageNo, pageSize, Sort.by(sortBy) );
  
-        Page<Microservices> pagedResult = pg.findAll(paging);
+        Page<MS> pagedResult = pg.findAll(paging);
          
         if(pagedResult.hasContent()) {
             return pagedResult.getContent();
