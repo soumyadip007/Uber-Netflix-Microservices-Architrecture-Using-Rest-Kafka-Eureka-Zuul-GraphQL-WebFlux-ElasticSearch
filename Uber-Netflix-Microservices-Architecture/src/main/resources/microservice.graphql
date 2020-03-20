@@ -3,8 +3,8 @@ schema {
 }
 
 type Query {
- allData: [GA4GH]
- single(id: ID): GA4GH
+ allData: [Microservices]
+ single(id: ID): Microservices
 }
 
 type GA4GH {
