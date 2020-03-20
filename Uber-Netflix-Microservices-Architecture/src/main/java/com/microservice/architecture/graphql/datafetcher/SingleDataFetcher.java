@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.microservice.architecture.entity.Microservices;
-import com.microservice.architecture.repository.GA4GHRepository;
+import com.microservice.architecture.repository.MicroservicesRepository;
 
 import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
@@ -13,7 +13,7 @@ import graphql.schema.DataFetchingEnvironment;
 public class SingleDataFetcher implements DataFetcher {
 
 	@Autowired
-	GA4GHRepository ga4ghRepository;
+	MicroservicesRepository ga4ghRepository;
 
 	@Override
 	public Microservices get(DataFetchingEnvironment environment) {
