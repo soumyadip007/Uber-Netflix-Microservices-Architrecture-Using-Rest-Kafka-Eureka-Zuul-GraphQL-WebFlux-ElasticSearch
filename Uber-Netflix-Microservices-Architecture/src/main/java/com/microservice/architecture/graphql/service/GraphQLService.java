@@ -27,7 +27,7 @@ import graphql.schema.idl.errors.SchemaProblem;
 public class GraphQLService {
 
 	@Autowired
-	MicroservicesRepository ga4ghRepository;
+	MicroservicesRepository microserviceRepository;
 	
 	@Value("classpath:microservice.graphql")
 	Resource resource;
