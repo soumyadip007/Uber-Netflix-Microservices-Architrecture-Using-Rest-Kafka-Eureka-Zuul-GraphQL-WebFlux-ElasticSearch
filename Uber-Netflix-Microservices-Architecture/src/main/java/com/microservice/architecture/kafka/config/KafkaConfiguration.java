@@ -7,6 +7,7 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
+import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
@@ -33,6 +34,17 @@ public class KafkaConfiguration {
 		return new DefaultKafkaConsumerFactory<>(config);
 	}
 	
+	
+	@Bean
+	public ConcurrentKafkaListenerContainerFactory<String,String> KafkaListenerContainerFactory(){
+		 ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory();
+	        factory.setConsumerFactory(consumerFactory());
+	        return factory;
+		
+	}
+	
+	
+	
 	@Bean
 	public  ConsumerFactory<String,MS> msFactory(){
 		
@@ -46,5 +58,8 @@ public class KafkaConfiguration {
 		
 		 return new DefaultKafkaConsumerFactory<>(config, new StringDeserializer(),
 	                new JsonDeserializer<>(MS.class));
+		
+
+	//	return new DefaultKafkaConsumerFactory<>(config, new JsonDeserializer<>(MS.class));
 	}
 }
