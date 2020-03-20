@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
+import org.springframework.kafka.support.serializer.JsonDeserializer;
 
 import com.fasterxml.jackson.databind.deser.std.StringDeserializer;
 import com.microservice.architecture.entity.MS;
@@ -33,7 +34,7 @@ public class KafkaConfiguration {
 	}
 	
 	@Bean
-	public  ConsumerFactory<String,MS> consumerUser(){
+	public  ConsumerFactory<String,MS> msFactory(){
 		
 		
 		Map<String, Object> config=new HashMap<>();
@@ -43,6 +44,7 @@ public class KafkaConfiguration {
 		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
 		config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"120.0.0.1");
 		
-		return new DefaultKafkaConsumerFactory<>(config);
+		 return new DefaultKafkaConsumerFactory<>(config, new StringDeserializer(),
+	                new JsonDeserializer<>(MS.class));
 	}
 }
