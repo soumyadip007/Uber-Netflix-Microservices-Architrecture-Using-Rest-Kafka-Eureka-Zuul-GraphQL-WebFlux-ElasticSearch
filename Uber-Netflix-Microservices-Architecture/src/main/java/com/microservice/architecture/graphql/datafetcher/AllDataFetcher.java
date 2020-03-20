@@ -15,12 +15,12 @@ import graphql.schema.DataFetchingEnvironment;
 public class AllDataFetcher implements DataFetcher {
 
 	@Autowired
-	MicroservicesRepository ga4ghRepository;
+	MicroservicesRepository microserviceRepository;
 
 	@Override
 	public List<Microservices> get(DataFetchingEnvironment environment) {
 		
-		return ga4ghRepository.findAll();
+		return microserviceRepository.findAll();
 	}
 	
 	
