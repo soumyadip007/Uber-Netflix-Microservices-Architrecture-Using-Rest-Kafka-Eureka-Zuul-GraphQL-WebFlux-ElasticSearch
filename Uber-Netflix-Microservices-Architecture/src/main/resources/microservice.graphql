@@ -9,9 +9,9 @@ type Query {
 
 type GA4GH {
   id: ID
-  sequencename: String
-  genbankaccn: String
-  refseqaccn: String
-  sequencelength: String
+  microentity1: String
+  microentity2: String
+  microentity3: String
+  microentity4: String
 }
 
