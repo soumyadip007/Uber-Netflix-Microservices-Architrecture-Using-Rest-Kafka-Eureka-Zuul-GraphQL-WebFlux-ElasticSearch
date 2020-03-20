@@ -30,7 +30,7 @@ public class JWTRestController {
 	@RequestMapping("/start")
 	public String start()
 	{
-		return "GA4GH";
+		return "micro";
 	}
 	
 	@RequestMapping(value="/authenticate", method = RequestMethod.POST)
