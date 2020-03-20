@@ -17,14 +17,10 @@ import reactor.core.publisher.Flux;
 @RestController
 public class FluxController {
 
-//	@Autowired  
-//	private GA4GHService GA4GHService;
-
 	@GetMapping("/flux")
 	public Flux<String> ga4ghFlux()
 	{
-		return Flux.just("GA4GH",
-				" genbankaccn"," refseqaccn"," sequencelength")
+		return Flux.just("Uber", "Netflix")
 				.delayElements(Duration.ofSeconds(1))
 				.log();
 		
@@ -33,21 +29,9 @@ public class FluxController {
 	@GetMapping(value="/stream", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Flux<String> ga4ghFluxStream()
 	{
-		return Flux.just("GA4GH",
-				" genbankaccn"," refseqaccn"," sequencelength")
+		return Flux.just("Uber", "Netflix")
 				.delayElements(Duration.ofSeconds(1))
 				.log();
 		
 	}
-	
-	
-//	@GetMapping(value="/GA4GH", produces = MediaType.APPLICATION_JSON_VALUE)
-//	public Flux<List<GA4GH>> ga4ghFluxaLL()
-//	{
-//		List<GA4GH> ls=GA4GHService.findAll();
-//		return Flux.just(ls)
-//				.delayElements(Duration.ofSeconds(1))
-//				.log();
-//		
-//	}
 }
