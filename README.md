@@ -14,3 +14,14 @@ Eureka is a REST (Representational State Transfer) based service that is primari
 
 # Netflix Zuul
 Zuul is the front door for all requests from devices and websites to the backend of the Netflix streaming application. As an edge service application, Zuul is built to enable dynamic routing, monitoring, resiliency, and security. Routing is an integral part of a microservice architecture
+
+# GraphQL
+GraphQL is a syntax that describes how to ask for data, and is generally used to load data from a server to a client. ... It lets the client specify exactly what data it needs. It makes it easier to aggregate data from multiple sources. It uses a type system to describe data.
+
+# Reactive Programming
+
+Reactive programming is an asynchronous programming paradigm concerned with data streams and the propagation of change. This means that it becomes possible to express static (e.g. arrays) or dynamic (e.g. event emitters) data streams with ease via the employed programming language(s).
+
+# Spring WebFlux
+
+Spring WebFlux is parallel version of Spring MVC and supports fully non-blocking reactive streams. It support the back pressure concept and uses Netty as inbuilt server to run reactive applications. If you are familiar with Spring MVC programming style, you can easily work on webflux also.
