@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.microservice.architecture.entity.Microservices;
 
 @Repository
-public interface GA4GHPageRepository extends PagingAndSortingRepository<Microservices, Integer> {
+public interface MicroservicesPageRepository extends PagingAndSortingRepository<Microservices, Integer> {
 
 }
