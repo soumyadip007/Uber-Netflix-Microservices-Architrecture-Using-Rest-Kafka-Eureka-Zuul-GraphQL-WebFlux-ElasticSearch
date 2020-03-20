@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import com.microservice.architecture.graphql.datafetcher.AllGA4GHDataFetcher;
+import com.microservice.architecture.graphql.datafetcher.AllDataFetcher;
 import com.microservice.architecture.graphql.datafetcher.GA4GHDataFetcher;
 import com.microservice.architecture.repository.GA4GHRepository;
 
@@ -33,7 +33,7 @@ public class GraphQLService {
 	Resource resource;
 	
 	@Autowired
-	private AllGA4GHDataFetcher allGA4GHDataFetcher;
+	private AllDataFetcher allGA4GHDataFetcher;
 	
 	@Autowired
 	private GA4GHDataFetcher ga4ghDataFetcher;
