@@ -15,9 +15,9 @@ public class KafkaConsumer {
 		System.out.println("Consumed message "+msg);
 	}
 	
-	@KafkaListener(topics="Kafka2",groupId="json")
-	public void consumeMS(MS ms)
-	{
-		System.out.println("Consumed message "+ms);
-	}
+//	@KafkaListener(topics="Kafka2",groupId="json")
+//	public void consumeMS(MS ms)
+//	{
+//		System.out.println("Consumed message "+ms);
+//	}
 }
