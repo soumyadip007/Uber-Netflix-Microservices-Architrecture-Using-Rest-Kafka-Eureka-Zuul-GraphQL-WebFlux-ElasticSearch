@@ -29,11 +29,11 @@ public class GraphQLService {
 	@Autowired
 	GA4GHRepository ga4ghRepository;
 	
-	@Value("classpath:ga4gh.graphql")
+	@Value("classpath:microservice.graphql")
 	Resource resource;
 	
 	@Autowired
-	private AllDataFetcher allGA4GHDataFetcher;
+	private AllDataFetcher allDataFetcher;
 	
 	@Autowired
 	private SingleDataFetcher ga4ghDataFetcher;
@@ -56,7 +56,7 @@ public class GraphQLService {
 	 private RuntimeWiring buildRuntimeWiring() {
 	        return RuntimeWiring.newRuntimeWiring()
 	                .type("Query", typeWiring -> typeWiring
-	                        .dataFetcher("allData", allGA4GHDataFetcher)
+	                        .dataFetcher("allData", allDataFetcher)
 	                        .dataFetcher("ga4gh", ga4ghDataFetcher))
 	                .build();
 	    }
