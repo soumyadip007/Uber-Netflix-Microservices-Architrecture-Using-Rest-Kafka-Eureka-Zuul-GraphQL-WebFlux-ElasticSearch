@@ -20,8 +20,8 @@ import lombok.Setter;
 @Entity
 @Data
 @AllArgsConstructor
-@Table(name = "microservices")
-public class Microservices {
+@Table(name = "ms")
+public class MS {
 
 
 
