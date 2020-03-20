@@ -16,42 +16,42 @@ import com.microservice.architecture.repository.MicroservicesRepository;
 public class MicroserviceService implements MicroserviceServiceInterface {
 
 	
-	private MicroservicesRepository GA4GHRepository;
+	private MicroservicesRepository microservicesRepository;
 	
 	@Autowired
 	private MicroservicesPageRepository pg;
 
 	@Autowired   
-	public MicroserviceService(MicroservicesRepository GA4GHRepository)
+	public MicroserviceService(MicroservicesRepository microservicesRepository)
 	{
-		this.GA4GHRepository=GA4GHRepository;
+		this.microservicesRepository=microservicesRepository;
 	}
 	
 	
 	public List<Microservices> findAll() {
-		return GA4GHRepository.findAll();
+		return microservicesRepository.findAll();
 	}
 
 	public void save(Microservices OBJ) {
 		
-		GA4GHRepository.save(OBJ);
+		microservicesRepository.save(OBJ);
 	}
 
 	public void deleteById(int theId) {
 		
-		GA4GHRepository.deleteById(theId);
+		microservicesRepository.deleteById(theId);
 	}
 
 	public Microservices findById(int theId) {
 		
-		return GA4GHRepository.findById(theId);
+		return microservicesRepository.findById(theId);
 	}
 
 
 
 	public List<Microservices> findByMicroentity1(String seq)
 	{
-		return GA4GHRepository.findByMicroentity1(seq);
+		return microservicesRepository.findBymicroentity1(seq);
 	}
 	
 	public List<Microservices> findPage(Integer pageNo, Integer pageSize, String sortBy)
