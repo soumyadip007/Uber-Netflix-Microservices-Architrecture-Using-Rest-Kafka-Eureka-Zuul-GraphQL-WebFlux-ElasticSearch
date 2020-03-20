@@ -45,30 +45,30 @@ public class KafkaConfiguration {
 	
 	
 	
-	@Bean
-	public  ConsumerFactory<String,MS> msFactory(){
-		
-		
-		Map<String, Object> config=new HashMap<>();
-		
-		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
-		config.put(ConsumerConfig.GROUP_ID_CONFIG,"json");
-		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
-		config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"120.0.0.1");
-		
-		 return new DefaultKafkaConsumerFactory<>(config, new StringDeserializer(),
-	                new JsonDeserializer<>(MS.class));
-		
-
-	//	return new DefaultKafkaConsumerFactory<>(config, new JsonDeserializer<>(MS.class));
-	}
+//	@Bean
+//	public  ConsumerFactory<String,MS> msFactory(){
+//		
+//		
+//		Map<String, Object> config=new HashMap<>();
+//		
+//		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
+//		config.put(ConsumerConfig.GROUP_ID_CONFIG,"json");
+//		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
+//		config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"120.0.0.1");
+//		
+//		 return new DefaultKafkaConsumerFactory<>(config, new StringDeserializer(),
+//	                new JsonDeserializer<>(MS.class));
+//		
+//
+//	//	return new DefaultKafkaConsumerFactory<>(config, new JsonDeserializer<>(MS.class));
+//	}
 	
-
-    @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, MS> maKafkaListenerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, MS> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(msFactory());
-        return factory;
-    }
+//
+//    @Bean
+//    public ConcurrentKafkaListenerContainerFactory<String, MS> maKafkaListenerFactory() {
+//        ConcurrentKafkaListenerContainerFactory<String, MS> factory = new ConcurrentKafkaListenerContainerFactory<>();
+//        factory.setConsumerFactory(msFactory());
+//        return factory;
+//    }
 
 }
