@@ -21,7 +21,7 @@ import lombok.Setter;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "ga4gh")
+@Table(name = "microservice")
 public class Microservices {
 
 
