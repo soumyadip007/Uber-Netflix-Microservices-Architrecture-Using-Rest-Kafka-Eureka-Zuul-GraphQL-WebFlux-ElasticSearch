@@ -18,6 +18,7 @@ import lombok.Setter;
 @Getter	
 @Setter	
 @Entity
+@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "MS")
 public class MS {
