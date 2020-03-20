@@ -21,8 +21,8 @@ public class KafkaConfiguration {
 		Map<String, Object> config=new HashMap<>();
 		
 		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
-		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
-		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
+		config.put(ConsumerConfig.GROUP_ID_CONFIG,"group_id");
+		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIGCONFIG,"120.0.0.1");
 		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
 		
 		
