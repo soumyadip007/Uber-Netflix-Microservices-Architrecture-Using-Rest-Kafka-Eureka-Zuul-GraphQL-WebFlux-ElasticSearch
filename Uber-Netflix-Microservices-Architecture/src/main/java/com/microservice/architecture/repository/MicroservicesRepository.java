@@ -9,7 +9,7 @@ import com.microservice.architecture.entity.Microservices;
 
 
 @Repository("GA4GHRepository")
-public interface GA4GHRepository extends JpaRepository<Microservices, Integer> {
+public interface MicroservicesRepository extends JpaRepository<Microservices, Integer> {
 
 	public Microservices findById(int id);
 	
