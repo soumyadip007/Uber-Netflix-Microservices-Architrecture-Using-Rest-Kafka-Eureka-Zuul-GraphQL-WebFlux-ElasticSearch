@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.ConsumerFactory;
+import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
+
+import com.fasterxml.jackson.databind.deser.std.StringDeserializer;
 
 @EnableKafka
 @Configuration
@@ -22,9 +25,9 @@ public class KafkaConfiguration {
 		
 		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
 		config.put(ConsumerConfig.GROUP_ID_CONFIG,"group_id");
-		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIGCONFIG,"120.0.0.1");
-		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
+		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
+		config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"120.0.0.1");
 		
-		
+		return new DefaultKafkaConsumerFactory<>(config);
 	}
 }
