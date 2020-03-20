@@ -16,8 +16,7 @@ public class GA4GHReactiveHandler {
 		return ServerResponse.ok()
 				.contentType(MediaType.APPLICATION_JSON)
 				.body(
-				Flux.just("GA4GH"," genbankaccn"," refseqaccn",
-					" sequencelength").log(), String.class);
+				Flux.just("Uber","Netflix").log(), String.class);
 				
 	}
 	
