@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.microservice.architecture.entity.Microservices;
 
-public interface GA4GHServiceInterface {
+public interface MicroserviceServiceInterface {
 
 	public List<Microservices> findAll();
 
