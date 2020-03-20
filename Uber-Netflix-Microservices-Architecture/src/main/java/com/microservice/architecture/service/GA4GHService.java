@@ -11,7 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.microservice.architecture.entity.Microservices;
-import com.microservice.architecture.repository.GA4GHPageRepository;
+import com.microservice.architecture.repository.MicroservicesPageRepository;
 import com.microservice.architecture.repository.GA4GHRepository;
 
 @Service
@@ -21,7 +21,7 @@ public class GA4GHService implements GA4GHServiceInterface {
 	private GA4GHRepository GA4GHRepository;
 	
 	@Autowired
-	private GA4GHPageRepository pg;
+	private MicroservicesPageRepository pg;
 
 	@Autowired   
 	public GA4GHService(GA4GHRepository GA4GHRepository)
