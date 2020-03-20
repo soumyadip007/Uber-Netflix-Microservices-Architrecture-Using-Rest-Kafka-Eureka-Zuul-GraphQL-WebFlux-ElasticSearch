@@ -19,26 +19,26 @@ import com.microservice.architecture.service.MicroserviceService;
 public class UserRestController {
 
 	
-	private MicroserviceService GA4GHService;
+	private MicroserviceService microservice;
 	
 
 	@Autowired   
-	public UserRestController(MicroserviceService GA4GHService)
+	public UserRestController(MicroserviceService microservice)
 	{
-		this.GA4GHService=GA4GHService;
+		this.microservice=microservice;
 	}
 	
 
 	@GetMapping
 	public List<Microservices> FindAll() {
 	
-		return GA4GHService.findAll();
+		return microservice.findAll();
 	}
 	
 	@GetMapping("/{pageNo}")
 	public List<Microservices> FindPage(@PathVariable int pageNo) {
 	
-		List<Microservices> list = GA4GHService.findPage(pageNo,100, "id");
+		List<Microservices> list = microservice.findPage(pageNo,100, "id");
 		
 		return list;
 	}
@@ -47,7 +47,7 @@ public class UserRestController {
 	public List<Microservices> FindPageWithSize(@PathVariable int pageNo,
 								@PathVariable int pageSize) {
 	
-		List<Microservices> list = GA4GHService.findPage(pageNo,pageSize, "id");
+		List<Microservices> list = microservice.findPage(pageNo,pageSize, "id");
 		
 		return list;
 	}
@@ -56,7 +56,7 @@ public class UserRestController {
 	public List<Microservices> FindPageWithSorting(@PathVariable int pageNo,
 								@PathVariable String sort) {
 	
-		List<Microservices> list = GA4GHService.findPage(pageNo,100, sort);
+		List<Microservices> list = microservice.findPage(pageNo,100, sort);
 		
 		return list;
 	}
@@ -68,7 +68,7 @@ public class UserRestController {
 								@PathVariable int pageSize,
 								@PathVariable String sort) {
 	
-		List<Microservices> list = GA4GHService.findPage(pageNo,pageSize,sort);
+		List<Microservices> list = microservice.findPage(pageNo,pageSize,sort);
 		
 		return list;
 	}
@@ -76,7 +76,7 @@ public class UserRestController {
 	@GetMapping("/limit/{pageSize}")
 	public List<Microservices> FindLimit(@PathVariable int pageSize) {
 	
-		List<Microservices> list = GA4GHService.findPage(0,pageSize,"id");
+		List<Microservices> list = microservice.findPage(0,pageSize,"id");
 		
 		return list;
 	}
@@ -86,7 +86,7 @@ public class UserRestController {
 	public List<Microservices> FindLimitWithSort(@PathVariable int pageSize,
 									@PathVariable String sort) {
 	
-		List<Microservices> list = GA4GHService.findPage(0,pageSize,sort);
+		List<Microservices> list = microservice.findPage(0,pageSize,sort);
 		
 		return list;
 	}
@@ -95,7 +95,7 @@ public class UserRestController {
 	@GetMapping("/id/{theId}")
 	public Microservices findById(@PathVariable int theId) {
 		
-		return GA4GHService.findById(theId);
+		return microservice.findById(theId);
 	}
 	
 	@GetMapping("/sequencename/{theId}")
@@ -108,7 +108,7 @@ public class UserRestController {
 		System.out.println(language);
 		
 		if(language.equals("ga4ahapisecuritykey"))
-			return GA4GHService.findBySequence_Name(theId);
+			return microservice.findBySequence_Name(theId);
 		
 		return null;
 		
@@ -126,7 +126,7 @@ public class UserRestController {
 		System.out.println(language);
 		
 		if(language.equals("ga4ahapisecuritykey"))
-			return GA4GHService.findBySequence_Name(theId);
+			return microservice.findBySequence_Name(theId);
 		
 		return null;
 	}
@@ -134,13 +134,13 @@ public class UserRestController {
 	@GetMapping("/refseq/{theId}")
 	public List<Microservices> findByRefseq_Accn(@PathVariable String theId) {
 		
-		return GA4GHService.findByRefseq_Accn(theId);
+		return microservice.findByRefseq_Accn(theId);
 	}
 	
 	@GetMapping("/sequencelength/{theId}")
 	public List<Microservices> findBySequencelength(@PathVariable String theId) {
 		
-		return GA4GHService.findBySequencelength(theId);
+		return microservice.findBySequencelength(theId);
 	}
 	
 
