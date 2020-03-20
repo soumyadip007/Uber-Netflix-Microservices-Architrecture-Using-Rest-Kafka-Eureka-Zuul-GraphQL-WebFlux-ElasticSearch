@@ -27,7 +27,7 @@ public class KafkaConfiguration {
 		Map<String, Object> config=new HashMap<>();
 		
 		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
-		config.put(ConsumerConfig.GROUP_ID_CONFIG,"group_id");
+		config.put(ConsumerConfig.GROUP_ID_CONFIG,"string");
 		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
 		config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"120.0.0.1");
 		
@@ -52,7 +52,7 @@ public class KafkaConfiguration {
 		Map<String, Object> config=new HashMap<>();
 		
 		config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"120.0.0.1");
-		config.put(ConsumerConfig.GROUP_ID_CONFIG,"group_id");
+		config.put(ConsumerConfig.GROUP_ID_CONFIG,"json");
 		config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
 		config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"120.0.0.1");
 		
@@ -62,4 +62,13 @@ public class KafkaConfiguration {
 
 	//	return new DefaultKafkaConsumerFactory<>(config, new JsonDeserializer<>(MS.class));
 	}
+	
+
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, MS> maKafkaListenerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, MS> factory = new ConcurrentKafkaListenerContainerFactory<>();
+        factory.setConsumerFactory(userConsumerFactory());
+        return factory;
+    }
+
 }
