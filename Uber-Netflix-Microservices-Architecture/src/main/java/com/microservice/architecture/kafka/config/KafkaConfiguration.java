@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -21,6 +22,7 @@ public class KafkaConfiguration {
 
 	
 	@Bean
+	@ConditionalOnMissingBean(name = "yourListenerFactory1")
 	public  ConsumerFactory<String,String> consumerFactory(){
 		
 		
@@ -35,7 +37,8 @@ public class KafkaConfiguration {
 	}
 	
 	
-	@Bean
+	@Bean(name = "yourListenerFactory1")
+	
 	public ConcurrentKafkaListenerContainerFactory<String,String> KafkaListenerContainerFactory(){
 		 ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory();
 	        factory.setConsumerFactory(consumerFactory());
