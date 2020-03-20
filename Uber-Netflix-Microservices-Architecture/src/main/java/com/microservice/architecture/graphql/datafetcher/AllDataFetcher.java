@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.microservice.architecture.entity.Microservices;
+import com.microservice.architecture.entity.MS;
 import com.microservice.architecture.repository.MicroservicesRepository;
 
 import graphql.schema.DataFetcher;
@@ -18,7 +18,7 @@ public class AllDataFetcher implements DataFetcher {
 	MicroservicesRepository microserviceRepository;
 
 	@Override
-	public List<Microservices> get(DataFetchingEnvironment environment) {
+	public List<MS> get(DataFetchingEnvironment environment) {
 		
 		return microserviceRepository.findAll();
 	}
