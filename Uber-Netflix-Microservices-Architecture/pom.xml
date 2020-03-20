@@ -8,11 +8,11 @@
 		<version>2.2.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ga4gh.prototype</groupId>
-	<artifactId>GA4GH</artifactId>
+	<groupId>com.microservice.architecture</groupId>
+	<artifactId>Microservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GA4GH</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Uber Netflix Architecture</name>
+	<description>project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
