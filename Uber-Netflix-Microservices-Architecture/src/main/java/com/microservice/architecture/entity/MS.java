@@ -30,16 +30,16 @@ public class MS {
 	private int id;		
 
 
-	@Column(name = "mincroentity1")
+	@Column(name = "a")
 	private String mincroentity1;	
 	
-	@Column(name = "mincroentity2")
+	@Column(name = "b")
 	private String mincroentity2;	
 	
-	@Column(name = "mincroentity3")
+	@Column(name = "c")
 	private String mincroentity3;		
 	
 
-	@Column(name = "mincroentity4")
+	@Column(name = "mincroentit")
 	private String mincroentity4;
 }
