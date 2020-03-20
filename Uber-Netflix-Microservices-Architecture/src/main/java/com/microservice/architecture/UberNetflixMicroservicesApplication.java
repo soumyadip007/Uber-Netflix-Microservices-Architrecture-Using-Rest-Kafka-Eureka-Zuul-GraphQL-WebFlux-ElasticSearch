@@ -10,10 +10,10 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
  *
  */
 @SpringBootApplication
-public class Ga4GhApplication {
+public class UberNetflixMicroservicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ga4GhApplication.class, args);
+		SpringApplication.run(UberNetflixMicroservicesApplication.class, args);
 	}
 
 }
