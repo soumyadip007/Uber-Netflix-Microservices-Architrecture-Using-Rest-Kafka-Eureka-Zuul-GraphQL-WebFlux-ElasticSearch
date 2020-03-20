@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.microservice.architecture.entity.Microservices;
 
-public interface MicroserviceServiceInterface {
+public interface Microservices {
 
 	public List<Microservices> findAll();
 
@@ -14,11 +14,5 @@ public interface MicroserviceServiceInterface {
 	
 	public Microservices findById(int theId);
 
-	public List<Microservices> findBySequence_Name(String seq);
-	
-	public List<Microservices> findByGenBank_Accn(String seq);
-	
-	public List<Microservices> findByRefseq_Accn(String seq);
-	
-	public List<Microservices> findBySequencelength(String seq);
+	public List<Microservices> findByMicroentity1(String seq);
 }
