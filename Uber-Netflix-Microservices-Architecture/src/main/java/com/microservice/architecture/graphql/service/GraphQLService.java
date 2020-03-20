@@ -36,7 +36,7 @@ public class GraphQLService {
 	private AllDataFetcher allDataFetcher;
 	
 	@Autowired
-	private SingleDataFetcher ga4ghDataFetcher;
+	private SingleDataFetcher singleDataFetcher;
 	
 	private GraphQL graphQL;
 	
@@ -57,7 +57,7 @@ public class GraphQLService {
 	        return RuntimeWiring.newRuntimeWiring()
 	                .type("Query", typeWiring -> typeWiring
 	                        .dataFetcher("allData", allDataFetcher)
-	                        .dataFetcher("ga4gh", ga4ghDataFetcher))
+	                        .dataFetcher("single", singleDataFetcher))
 	                .build();
 	    }
 	
