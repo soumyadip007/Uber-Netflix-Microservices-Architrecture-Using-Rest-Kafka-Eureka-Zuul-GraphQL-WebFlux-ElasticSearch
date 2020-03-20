@@ -1,10 +1,8 @@
 package com.microservice.architecture.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -50,26 +48,10 @@ public class MicroserviceService implements MicroserviceServiceInterface {
 	}
 
 
-	public List<Microservices> findBySequence_Name(String seq) {
-		
-		return GA4GHRepository.findBySequencename(seq);
-	}
 
-
-	public List<Microservices> findByGenBank_Accn(String seq) {
-		
-		return GA4GHRepository.findByGenbankaccn(seq);
-	}
-
-
-	public List<Microservices> findByRefseq_Accn(String seq) {
-		
-		return GA4GHRepository.findByRefseqaccn(seq);
-	}
-	
-	public List<Microservices> findBySequencelength(String seq)
+	public List<Microservices> findByMicroentity1(String seq)
 	{
-		return GA4GHRepository.findBySequencelength(seq);
+		return GA4GHRepository.findByMicroentity1(seq);
 	}
 	
 	public List<Microservices> findPage(Integer pageNo, Integer pageSize, String sortBy)
