@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import com.microservice.architecture.entity.Microservices;
+import com.microservice.architecture.entity.MS;
 import com.microservice.architecture.restcontroller.AdminRestController;
 
 import junit.framework.Assert;
