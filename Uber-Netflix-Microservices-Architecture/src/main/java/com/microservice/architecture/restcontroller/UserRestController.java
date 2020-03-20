@@ -107,9 +107,6 @@ public class UserRestController {
 		System.out.println(language);
 		System.out.println(language);
 		
-		if(language.equals("ga4ahapisecuritykey"))
-			return microservice.findBySequence_Name(theId);
-		
 		return null;
 		
 
