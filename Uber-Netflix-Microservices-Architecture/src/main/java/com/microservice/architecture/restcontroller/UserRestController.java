@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.microservice.architecture.entity.Microservices;
-import com.microservice.architecture.service.GA4GHService;
+import com.microservice.architecture.service.MicroserviceService;
 
 @CrossOrigin(origins ="*",allowedHeaders="*",maxAge=200000) 
 @RestController
@@ -19,11 +19,11 @@ import com.microservice.architecture.service.GA4GHService;
 public class UserRestController {
 
 	
-	private GA4GHService GA4GHService;
+	private MicroserviceService GA4GHService;
 	
 
 	@Autowired   
-	public UserRestController(GA4GHService GA4GHService)
+	public UserRestController(MicroserviceService GA4GHService)
 	{
 		this.GA4GHService=GA4GHService;
 	}
