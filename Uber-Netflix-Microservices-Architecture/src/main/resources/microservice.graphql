@@ -4,7 +4,7 @@ schema {
 
 type Query {
  allData: [GA4GH]
- ga4gh(id: ID): GA4GH
+ single(id: ID): GA4GH
 }
 
 type GA4GH {
