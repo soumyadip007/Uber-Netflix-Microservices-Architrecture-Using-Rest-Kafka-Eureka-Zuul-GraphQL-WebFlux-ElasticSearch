@@ -20,7 +20,6 @@ import lombok.Setter;
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "Microservices")
 public class Microservices {
 
