@@ -98,8 +98,8 @@ public class UserRestController {
 		return microservice.findById(theId);
 	}
 	
-	@GetMapping("/sequencename/{theId}")
-	public List<Microservices> findBySequence_Name(@RequestHeader("key") String language,
+	@GetMapping("/microentity1/{theId}")
+	public List<Microservices> findByMicroentity1(@RequestHeader("key") String language,
 			@PathVariable String theId) {
 		System.out.println(language);
 		System.out.println(language);
