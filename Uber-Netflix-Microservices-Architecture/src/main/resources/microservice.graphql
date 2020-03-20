@@ -3,7 +3,7 @@ schema {
 }
 
 type Query {
- allData: []
+ allData: [Microservices]
  single(id: ID): Microservices
 }
 
