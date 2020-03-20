@@ -3,11 +3,11 @@ schema {
 }
 
 type Query {
- allData: [Microservices]
+ allData: []
  single(id: ID): Microservices
 }
 
-type GA4GH {
+type Microservices {
   id: ID
   microentity1: String
   microentity2: String
