@@ -22,7 +22,7 @@ public class KafkaConfiguration {
 
 	
 	@Bean
-	@ConditionalOnMissingBean(name = "yourListenerFactory1")
+	
 	public  ConsumerFactory<String,String> consumerFactory(){
 		
 		
@@ -37,8 +37,8 @@ public class KafkaConfiguration {
 	}
 	
 	
-	@Bean(name = "yourListenerFactory1")
-	
+	@Bean
+	@ConditionalOnMissingBean(ConsumerFactory.class) 
 	public ConcurrentKafkaListenerContainerFactory<String,String> KafkaListenerContainerFactory(){
 		 ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory();
 	        factory.setConsumerFactory(consumerFactory());
