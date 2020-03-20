@@ -13,14 +13,14 @@ import graphql.schema.DataFetchingEnvironment;
 public class SingleDataFetcher implements DataFetcher {
 
 	@Autowired
-	MicroservicesRepository ga4ghRepository;
+	MicroservicesRepository microserviceRepository;
 
 	@Override
 	public Microservices get(DataFetchingEnvironment environment) {
 		
 		String key= environment.getArgument("id");
 		int i=Integer.parseInt(key);
-		return ga4ghRepository.findById(i);
+		return microserviceRepository.findById(i);
 	}
 
 }
